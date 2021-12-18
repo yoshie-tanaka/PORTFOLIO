@@ -1,0 +1,152 @@
+@charset "utf-8";
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+  a {
+    text-decoration :none;
+  }
+
+  header{
+    max-width:100vw;
+    width: 100%;
+    height: 80px;
+    font-family: serif;
+    z-index: 3;
+    position: fixed;
+    top: 0;
+  }
+
+ 
+ @keyframes fadeIn { /*animation-nameで設定した値を書く*/
+  0% {opacity: 0} 
+  100% {opacity: 1} 
+}
+
+  .header-list{
+    height: 80px;
+    padding-right: 20px;
+    animation: fadeIn 8s;
+  }
+
+  .header-list ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  
+  .header-list ul li a{
+    display: inline-block;
+    text-decoration: none;
+    line-height: 80px;
+    color: #fff;
+    text-shadow: 2px 2px 3px rgba(154, 147, 155);
+    font-size: 20px;
+    padding: 0 25px;
+    border-radius: 30px;
+  }
+  
+  .header-list ul li a:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: all 0.5s;
+  }
+
+/*　ハンバーガーボタン　*/
+.hamburger {
+  display : block;
+  position: absolute;
+  z-index : 10;
+  right : 13px;
+  top   : 12px;
+  width : 42px;
+  height: 42px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.hamburger span {
+  display : block;
+  position: absolute;
+  width   : 30px;
+  height  : 2px ;
+  left   : 6px;
+  background : #fff;
+  -webkit-transition: 0.3s ease-in;
+  -moz-transition   : 0.3s ease-in;
+  transition        : 0.3s ease-in;
+}
+
+.hamburger span:nth-child(1) {
+  top: 5px;
+}
+.hamburger span:nth-child(2) {
+  top: 15px;
+}
+.hamburger span:nth-child(3) {
+  top: 25px;
+}
+
+/* ナビ開いてる時のボタン */
+.hamburger.active span:nth-child(1) {
+  top : 16px;
+  left: 6px;
+  background :#fff;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform   : rotate(-45deg);
+  transform        : rotate(-45deg);
+}
+
+.hamburger.active span:nth-child(2),
+.hamburger.active span:nth-child(3) {
+  top: 16px;
+  background :#fff;
+  -webkit-transform: rotate(45deg);
+  -moz-transform   : rotate(45deg);
+  transform        : rotate(45deg);
+}
+
+nav.globalMenuSp {
+  min-width: 100vw;
+  z-index : -1;
+  top  : 0;
+  color: #fff;
+  text-align: center;
+  width:100%;
+  height: 100%;
+  visibility: hidden;
+}
+
+nav.globalMenuSp ul {
+  margin: 0 auto;
+  width: 100%;
+  background: rgba(0,0,0,0.7);
+
+}
+
+nav.globalMenuSp ul li {
+  width: 100%;
+  transition: .4s ease-in;
+}
+nav.globalMenuSp ul li:last-child {
+  padding-bottom: 0;
+}
+nav.globalMenuSp ul li:hover{
+  background :#ddd;
+}
+
+nav.globalMenuSp ul li a {
+  display: block;
+  color: #fff;
+  padding: 1em 0;
+}
+
+/* このクラスを、jQueryで付与・削除する */
+nav.globalMenuSp.active {
+  opacity: 10;
+  visibility: visible;
+}

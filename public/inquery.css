@@ -1,0 +1,127 @@
+@charset "utf-8";
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  body{
+    background-color: rgb(23, 25, 46);
+    color: #fff;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    top: 0;
+    max-width: 100vw;
+    margin: 0 auto;
+    font-size: 15px;
+  }
+
+  .contact-form{
+    max-width: 1140px;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 100px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeIn 1s;
+    text-shadow: 3px 3px 5px rgba(154, 147, 155);
+  }
+
+  .row {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+
+
+  .section-title {
+    flex: 0 0 100px;
+    width: 100%;
+    padding-left: 50px;
+  }
+
+  h3 {
+    margin: 30px auto;
+    padding: 10px 0;
+    letter-spacing: 2px;
+    display: inline-block;
+    font-size: 2em;
+  }
+
+  .form-control {
+    max-width: 650px;
+    height: 70px;
+    width: 100%;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 50px;
+  }
+
+  input,textarea {
+    font-size: 1.3em;
+    border: none;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: inset 0 0 20px rgb(23, 25, 46),
+    inset 0 0 20px rgb(23, 25, 46),
+    inset 0 0 20px rgb(23, 25, 46),
+    inset 0 0 20px rgb(23, 25, 46),
+    inset 0 0 20px rgb(23, 25, 46);
+  }
+
+  label {
+    margin-top: 30px 0 10px;
+  }
+
+  .con-1 {
+    max-width: 50%;
+    flex: 0 0 50%;
+  }
+
+  .con-1:nth-of-type(1) {
+    padding-right: 5px;
+  }
+
+  .con-2 {
+    height: 150px;
+  }
+
+  .con-1,
+  .con-2 {
+    padding-left: 50px;
+  }
+
+  .con-2, .con-3 {
+    max-width: 100%;
+    flex: 0 0 100%;
+    padding-bottom: 60px;
+    }
+
+  textarea {
+    margin-top: 10px;
+    width: 100%;
+    height: 100px;
+  }
+
+  .button {
+    display: block;
+    width: 130px;
+    margin: 0px auto;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1em;
+    padding: 10px 0px;
+    line-height   : 3em;
+    letter-spacing: 5px;
+    transition    : .3s;
+    color: rgb(23, 25, 46);
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 3px 3px 3px rgb(73, 72, 73);
+    font-weight: bolder;
+  }
+
+  .button:hover {
+    text-shadow: none;
+  }

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="inquery.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="responsive.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="header.js" defer></script>
+</head>
+
+<body>
+
+    <%- include('header'); %>
+
+        <div class="contact-form">
+            <h3 class = "section-title">CONTACT</h3>
+                
+            <div class="inquery-contents">
+                <form action= "/confirm" method= "post">
+                    <div class="row">
+                        <div class="con-1">
+                            <label>NAME</label>
+                            <input type="text" name="zname" class="form-control">
+                        </div>
+
+                        <div class="con-1">
+                            <label>MAIL ADDRESS</label>
+                            <input type="text" name="email" class="form-control">
+                        </div>
+
+                        <div class="con-2">
+                            <label>MESSAGE</label>
+                            <textarea name="message" cols="20" rows="3"></textarea>
+                        </div>
+
+                        <div class="con-3">
+                            <input type="submit" value="CHECK" class="button">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    <%- include('footer'); %>
+
+</body>
+</html>

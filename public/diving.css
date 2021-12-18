@@ -1,0 +1,138 @@
+@charset "utf-8";
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+body{
+    font-family: serif;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    background-color: rgb(23, 25, 46);
+    max-width: 100vw;
+    margin: 0 auto;
+    font-size: 50px;
+    text-shadow: 3px 3px 5px rgba(154, 147, 155);
+}
+
+
+/* ----------animation------------- */
+    /*タイトルの文字　だんだん元に戻るようにする*/
+    @keyframes titleAnimation {
+        0% {
+        letter-spacing: .5em;
+        opacity: 0;
+        }
+    }
+
+
+    #title {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding-top: 100px;
+    }
+
+    #title h1 {
+        font-size: 1.1em;
+        font-weight: bold;
+        margin:100px auto;
+        white-space: nowrap;
+        animation: titleAnimation 3s;
+        letter-spacing: .2em;
+    }
+
+    .divingcontents {
+        max-width: 1000px;
+        width: 100%;
+        margin: 50px auto;
+        z-index: 3;
+    }
+
+    .contents li.show h2,
+    .contents li.show p,
+    .contents li.show img{
+        transform: none;
+        opacity: 1;
+    }
+
+    li{
+        list-style-type: none;
+    }
+
+    .contents li {
+        position: relative; /*親要素*/
+        margin-left: auto;
+    }
+
+    .contents li:not(:first-of-type) {
+        margin-top: 200px;
+    }
+
+    /*奇数番目(odd)のcontentsTextが右よせ*/
+    .contents li:nth-of-type(odd) .contentsText{
+        right: 0%;
+    }
+
+    /*偶数番目(even)のテキストが左よせ*/
+    .contents li:nth-of-type(even) .contentsText{
+        align-items: flex-start;
+    }
+
+    /*偶数番目(even)の画像が左よせ*/
+    .contents li:nth-of-type(even) img{
+        margin-left: auto;
+        transform: translate(20px, 20px);
+        transition: 1s;
+    }
+
+    .contents li:nth-of-type(odd) img{
+        right: 0%;
+        transform: translate(-20px, 20px);
+        transition: 1s;
+    }
+
+
+    .contentsText {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        position: absolute; /*子要素*/
+        top: 40px;
+    }
+
+    .contents h2 {
+        font-size: 1em;
+        font-weight: bold;
+        white-space: nowrap;
+        background-color: rgba(20, 20, 20, .8);
+        padding: 10px 20px;
+        line-height: 1.4;
+        letter-spacing: .05em;
+        border-radius: 5px;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: 1s;
+    }
+
+    .contents p {
+        line-height: 1.6;
+        background-color: #333;
+        font-size: 0.3em;
+        max-width: 400px;
+        padding: 15px;
+        margin-top: 30px;
+        border-radius: 5px;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: 1s;
+    }
+
+    .contents img {
+        width: 65%;
+        display: block;
+        border-radius: 5px;
+        opacity: 0;
+    }
+

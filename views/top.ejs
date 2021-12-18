@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanaka Yoshie</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="top.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+    <script src="header.js" defer></script>
+    <script src="top.js" defer></script>
+    <script src="diving.js" defer></script>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Zen+Kurenaido&family=Zen+Old+Mincho&display=swap');</style>
+</head>
+
+
+<body>
+    
+    <%- include('header'); %>
+
+    <main>
+        <div id="particles-js"></div>
+        <div class="top-wrapper">
+            <div class="textAnimation">PORTFOLIO</div>
+            <div class="textAnimation">YOSHIE TANAKA</div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    </main>
+
+    <section class="profile-wrapper">
+        <section class="profile-title animationTarget">
+            <h2 id="about">About Me</h2>
+        </section>
+
+        <section class="profile-main animationTarget">
+            <img src="profile.jpg" alt="profile">
+            <p class="name">YOSHIE TANAKA | 青森県出身<br><br>
+                新しい技術にふれる楽しさを感じながら、<br>
+                見る人に喜んでいただける作品を作りたいです。</p>
+        </section>
+    </section>
+
+    <section>
+        <section class="profile-wrapper">
+            <section class="profile-content">
+                <section class="profile-title animationTarget">
+                    <h2 id="history">History</h2>
+                </section>
+
+                    <div #swiperRef="" class="swiper mySwiper">
+                        <div class="swiper-wrapper animationTarget">
+
+                            <div class="swiper-slide">
+                                <h3>サービス業界</h3>
+                                <p>高校卒業後、上京。<br>
+                                    基本的な社会人マナーや<br>接客態度を学ぶ<br><br>
+                                    プライベートでは、東京の楽しさを知り、<br>どんどん東京に染まっていく。
+                                </p>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <h3>人材業界</h3>
+                                <p>サービス業で働いていた経験を活かし、<br>求人広告（an）の作成に励む。<br><br>
+                                    1人でも多くの人が働いていて楽しいと思えるよう、
+                                    その職場の雰囲気だったり、<br>個性が伝わるような原稿制作を心がける。
+                                </p>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <h3>ベンチャー企業</h3>
+                                <p>マーケティング部署での勤務から始まり、<br>
+                                    データ集計関係、業務効率化・自動化など、<br>幅広い業務を経験。<br><br>
+                                    業務効率化では、複数の数式を組み合わせたものを使用したり、
+                                    システム開発部署と連携した業務の自動化も実施。
+                                </p>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <h3>Webエンジニアへ</h3>
+                                <p>元々簡単なプログラミングに触れていたこともあり、本格的に勉強を開始。
+                                    休みの日もプログラミング勉強に明け暮れるほど、夢中になる。<br><br>
+                                    「これを自分の本業にしたい」と強く想うようになり、エンジニアへの転職を決意。<br>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+            </section>
+        </section>
+    </section>
+
+
+    <section>
+        <%- include('production'); %>
+
+        <section class="profile-wrapper">
+            <section class="profile-content">
+                <section class="profile-title animationTarget">
+                    <h2 id="production">Production</h2>
+                </section>
+
+                    <div #swiperRef="" class="swiper mySwiper">
+                        <div class="swiper-wrapper animationTarget">
+
+                            <div class="swiper-slide production-item">
+                                <a href="#" class="js-modal-open" data-target="modal01">    
+                                    <h3>PORTFOLIO</h3>
+                                    <img src="portfolio.png" alt="portfolioの画像">
+                                </a>
+                            </div>
+
+                            <div class="swiper-slide production-item">
+                                <a href="#" class="js-modal-open" data-target="modal02">
+                                    <h3>HAPPY WORDS</h3>
+                                    <img src="word1.png" alt="HAPPY WORDSのトップ画像">
+                                </a>
+                            </div>
+
+                            <div class="swiper-slide production-item">
+                                <a href="#" class="js-modal-open" data-target="modal03">
+                                    <h3>Coming soon</h3>
+                                    <img src="comingsoon.jpg" alt="comingsoon">
+                                </a>
+                            </div>
+
+                            <div class="swiper-slide production-item">
+                                <a href="#" class="js-modal-open" data-target="modal04">
+                                    <h3>Coming soon</h3>
+                                    <img src="comingsoon.jpg" alt="comingsoon">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                    <!-- Swiper JS -->
+                    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+                </section>
+        </section>
+    </section>
+    <%- include('footer'); %>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</body>
+</html>
+
