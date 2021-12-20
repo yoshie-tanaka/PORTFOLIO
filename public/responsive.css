@@ -102,6 +102,13 @@ a {
         margin: 0;
     }
 
+
+    /* modal */
+
+    .modal__content {
+        padding: 20px;
+    }
+
     /* ------diving----- */
 
     #title h1 {
